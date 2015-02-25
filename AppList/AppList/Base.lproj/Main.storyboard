@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gIM-yo-vEZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6750" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gIM-yo-vEZ">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6735"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -123,14 +123,14 @@
                                 <exclude reference="Ik7-B0-8M6"/>
                                 <exclude reference="vAU-x6-6ag"/>
                                 <exclude reference="2Es-G4-PJH"/>
+                                <exclude reference="GHk-r5-DrL"/>
+                                <exclude reference="yGi-tc-HtY"/>
                                 <exclude reference="3gW-kj-YEz"/>
                                 <exclude reference="IxI-WC-Ub2"/>
                                 <exclude reference="SUv-9q-aYx"/>
                                 <exclude reference="Wig-CA-USw"/>
                                 <exclude reference="izB-u5-LFc"/>
                                 <exclude reference="nRL-7n-Jsx"/>
-                                <exclude reference="GHk-r5-DrL"/>
-                                <exclude reference="yGi-tc-HtY"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -144,6 +144,10 @@
                                 <include reference="vAU-x6-6ag"/>
                                 <exclude reference="15J-P8-oDr"/>
                                 <exclude reference="2Es-G4-PJH"/>
+                                <exclude reference="GHk-r5-DrL"/>
+                                <exclude reference="gtC-Qv-V56"/>
+                                <exclude reference="smX-cW-t9P"/>
+                                <include reference="yGi-tc-HtY"/>
                                 <include reference="3gW-kj-YEz"/>
                                 <exclude reference="IxI-WC-Ub2"/>
                                 <exclude reference="SUv-9q-aYx"/>
@@ -154,10 +158,6 @@
                                 <exclude reference="izB-u5-LFc"/>
                                 <exclude reference="nRL-7n-Jsx"/>
                                 <exclude reference="tXC-9q-S6g"/>
-                                <exclude reference="GHk-r5-DrL"/>
-                                <exclude reference="gtC-Qv-V56"/>
-                                <exclude reference="smX-cW-t9P"/>
-                                <include reference="yGi-tc-HtY"/>
                             </mask>
                         </variation>
                     </view>

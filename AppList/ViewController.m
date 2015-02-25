@@ -39,7 +39,6 @@
 */
 
 - (IBAction)cadastrar:(id)sender {
-    table = [[TableViewController alloc]init];
     [[table listaNome]addObject: textNome.text];
     [[table listaCategoria]addObject: textCategoria.text];
     NSLog(@"Foi");
