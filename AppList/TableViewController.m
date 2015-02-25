@@ -7,6 +7,7 @@
 //
 
 #import "TableViewController.h"
+#import "TableViewCell.h"
 
 @interface TableViewController ()
 
@@ -15,6 +16,7 @@
 @implementation TableViewController
 
 @synthesize listaCategoria, listaFoto, listaNome;
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
