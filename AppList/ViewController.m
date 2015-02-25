@@ -19,8 +19,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -39,9 +37,17 @@
 */
 
 - (IBAction)cadastrar:(id)sender {
-    [[table listaNome]addObject: textNome.text];
+    [table.listaNome addObject:textNome.text];
+//    [[table listaNome]addObject: textNome.text];
     [[table listaCategoria]addObject: textCategoria.text];
-    NSLog(@"Foi");
+    NSLog(@"%@", [[table listaNome]lastObject]);
+//    NSLog(@"%@", textNome.text);
+}
+
+-(void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [textNome resignFirstResponder];
+    [textCategoria resignFirstResponder];
+
 }
 
 - (IBAction)voltar:(id)sender {
