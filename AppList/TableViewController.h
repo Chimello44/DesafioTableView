@@ -7,18 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "TableViewCell.h"
+#import "AppViewController.h"
 
 @interface TableViewController : UITableViewController
 
 {
-    NSMutableArray *listaNome;
-    NSMutableArray *listaCategoria;
-    NSMutableArray *listaFoto;
+    NSArray *listaNome;
+    NSArray *listaCategoria;
+    NSArray *listaFoto;
 }
 - (IBAction)cadastro:(id)sender;
 
-@property NSMutableArray *listaNome;
-@property NSMutableArray *listaCategoria;
-@property NSMutableArray *listaFoto;
+@property NSArray *listaNome;
+@property NSArray *listaCategoria;
+@property NSArray *listaFoto;
 @end

@@ -1,24 +1,24 @@
 //
-//  ViewController.m
+//  AppViewController.m
 //  AppList
 //
 //  Created by Hugo Luiz Chimello on 2/25/15.
 //  Copyright (c) 2015 Hugo Luiz Chimello. All rights reserved.
 //
 
-#import "ViewController.h"
-#import "TableViewController.h"
+#import "AppViewController.h"
 
-@interface ViewController ()
+@interface AppViewController ()
 
 @end
 
-@implementation ViewController
-
-@synthesize textNome, textCategoria;
+@implementation AppViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+//    
+    _appNome.text=_appDetail[0];
+    _appCategoria.text=_appDetail[1];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -36,21 +36,7 @@
 }
 */
 
-- (IBAction)cadastrar:(id)sender {
-//    [table.listaNome addObject:textNome.text];
-////    [[table listaNome]addObject: textNome.text];
-//    [[table listaCategoria]addObject: textCategoria.text];
-//    NSLog(@"%@", [[table listaNome]lastObject]);
-////    NSLog(@"%@", textNome.text);
-}
-
--(void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    [textNome resignFirstResponder];
-    [textCategoria resignFirstResponder];
-
-}
-
-- (IBAction)voltar:(id)sender {
+- (IBAction)voltarApp:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 @end
