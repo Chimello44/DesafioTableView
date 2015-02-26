@@ -42,11 +42,10 @@
     
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    listaNome = @[@"Waze",@"Facebook",@"WhatsApp"];
+    listaCategoria = @[@"Naveagação", @"Entretenimento", @"Comunicação"];
+    //listaFoto
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -162,6 +161,14 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if([[segue identifier] isEqualToString:@"App"]){
+        AppViewController *appViewController =[segue destinationViewController];
+        NSIndexPath *myIndexPath =[self.tableView indexPathForSelectedRow];
+        
+        long row=[myIndexPath row];
+        appViewController.appDetail=@[listaNome[row],listaCategoria[row]];
+    }
+    
     
 }
 
