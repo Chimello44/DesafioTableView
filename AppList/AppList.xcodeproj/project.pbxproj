@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E36EA87E1A9E9D27000E2CE4 /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = E36EA87B1A9E9D27000E2CE4 /* facebook.png */; };
+		E36EA87F1A9E9D27000E2CE4 /* waze.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E36EA87C1A9E9D27000E2CE4 /* waze.jpg */; };
+		E36EA8801A9E9D27000E2CE4 /* whatsapp.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E36EA87D1A9E9D27000E2CE4 /* whatsapp.jpg */; };
 		E395DEFF1A9E60F1001FFC90 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E395DEFE1A9E60F1001FFC90 /* MainViewController.m */; };
 		E8D758191A9E41E4004CC606 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D758181A9E41E4004CC606 /* main.m */; };
 		E8D7581C1A9E41E4004CC606 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D7581B1A9E41E4004CC606 /* AppDelegate.m */; };
@@ -30,6 +33,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E36EA87B1A9E9D27000E2CE4 /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = facebook.png; path = Images.xcassets/facebook.png; sourceTree = "<group>"; };
+		E36EA87C1A9E9D27000E2CE4 /* waze.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = waze.jpg; path = Images.xcassets/waze.jpg; sourceTree = "<group>"; };
+		E36EA87D1A9E9D27000E2CE4 /* whatsapp.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = whatsapp.jpg; path = Images.xcassets/whatsapp.jpg; sourceTree = "<group>"; };
 		E395DEFD1A9E60F1001FFC90 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		E395DEFE1A9E60F1001FFC90 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		E8D758131A9E41E4004CC606 /* AppList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppList.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,6 +106,9 @@
 				E8D7581B1A9E41E4004CC606 /* AppDelegate.m */,
 				E8D758201A9E41E4004CC606 /* Main.storyboard */,
 				E8D758231A9E41E4004CC606 /* Images.xcassets */,
+				E36EA87B1A9E9D27000E2CE4 /* facebook.png */,
+				E36EA87C1A9E9D27000E2CE4 /* waze.jpg */,
+				E36EA87D1A9E9D27000E2CE4 /* whatsapp.jpg */,
 				E8D758251A9E41E4004CC606 /* LaunchScreen.xib */,
 				E8D758161A9E41E4004CC606 /* Supporting Files */,
 				E395DEFD1A9E60F1001FFC90 /* MainViewController.h */,
@@ -215,8 +224,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8D758221A9E41E4004CC606 /* Main.storyboard in Resources */,
+				E36EA87F1A9E9D27000E2CE4 /* waze.jpg in Resources */,
+				E36EA87E1A9E9D27000E2CE4 /* facebook.png in Resources */,
 				E8D758271A9E41E4004CC606 /* LaunchScreen.xib in Resources */,
 				E8D758241A9E41E4004CC606 /* Images.xcassets in Resources */,
+				E36EA8801A9E9D27000E2CE4 /* whatsapp.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

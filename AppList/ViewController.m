@@ -37,11 +37,11 @@
 */
 
 - (IBAction)cadastrar:(id)sender {
-    [table.listaNome addObject:textNome.text];
-//    [[table listaNome]addObject: textNome.text];
-    [[table listaCategoria]addObject: textCategoria.text];
-    NSLog(@"%@", [[table listaNome]lastObject]);
-//    NSLog(@"%@", textNome.text);
+//    [table.listaNome addObject:textNome.text];
+////    [[table listaNome]addObject: textNome.text];
+//    [[table listaCategoria]addObject: textCategoria.text];
+//    NSLog(@"%@", [[table listaNome]lastObject]);
+////    NSLog(@"%@", textNome.text);
 }
 
 -(void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
