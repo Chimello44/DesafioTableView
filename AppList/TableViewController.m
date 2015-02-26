@@ -157,14 +157,23 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    if([[segue identifier] isEqualToString:@"App"]){
+//    if([[segue identifier] isEqualToString:@"App"]){
+//        
+//        AppViewController *appViewController =[segue destinationViewController];
+//        NSIndexPath *myIndexPath =[self.tableView indexPathForSelectedRow];
+//        
+//        long row=[myIndexPath row];
+//        appViewController.appDetail=@[listaNome[row],listaCategoria[row], listaFoto[row]];
+//    }
+    if([[segue identifier] isEqualToString:@"appDetail"]){
+        
         AppViewController *appViewController =[segue destinationViewController];
         NSIndexPath *myIndexPath =[self.tableView indexPathForSelectedRow];
         
         long row=[myIndexPath row];
-        appViewController.appDetail=@[listaNome[row],listaCategoria[row], listaFoto[row]];
+        appViewController.appDetail=@[[listaNome objectAtIndex:row],[listaCategoria objectAtIndex:row], [listaFoto objectAtIndex:row]];
+        
     }
-    
     
 }
 
