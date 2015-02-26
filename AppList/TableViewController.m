@@ -42,10 +42,6 @@
     
     [super viewDidLoad];
     
-    listaNome = @[@"Waze",@"Facebook",@"WhatsApp"];
-    listaCategoria = @[@"Naveagação", @"Entretenimento", @"Comunicação"];
-    //listaFoto
-
 }
 
 - (void)didReceiveMemoryWarning {
@@ -166,7 +162,7 @@
         NSIndexPath *myIndexPath =[self.tableView indexPathForSelectedRow];
         
         long row=[myIndexPath row];
-        appViewController.appDetail=@[listaNome[row],listaCategoria[row]];
+        appViewController.appDetail=@[listaNome[row],listaCategoria[row], listaFoto[row]];
     }
     
     
