@@ -15,6 +15,8 @@
 //    NSArray *listaNome;
 //    NSArray *listaCategoria;
 //    NSArray *listaFoto;
+    //
+    //
     
     NSMutableArray *listaNome;
     NSMutableArray *listaCategoria;
