@@ -406,7 +406,7 @@
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
-                                            <variation key="heightClass=regular-widthClass=compact" ambiguous="YES">
+                                            <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
                                                 <rect key="frame" x="144" y="13" width="165" height="22"/>
                                             </variation>
                                         </label>
@@ -440,7 +440,7 @@
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
-                                            <variation key="heightClass=regular-widthClass=compact" ambiguous="YES">
+                                            <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
                                                 <rect key="frame" x="144" y="56" width="179" height="21"/>
                                             </variation>
                                         </label>
@@ -527,9 +527,15 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="130" y="58" width="340" height="20.5"/>
+                                </variation>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7mv-oc-DAM">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="73" y="343" width="455" height="2"/>
+                                </variation>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hw0-J1-0I5">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -546,7 +552,8 @@
                                         <exclude reference="kci-O2-Clr"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="177" y="459" width="46" height="30"/>
                                     <mask key="constraints">
                                         <include reference="2WU-3i-2Ty"/>
                                         <include reference="kci-O2-Clr"/>
@@ -554,7 +561,7 @@
                                 </variation>
                                 <connections>
                                     <action selector="voltarApp:" destination="HyS-41-Kj4" eventType="touchUpInside" id="33N-8S-xnq"/>
-                                    <segue destination="gIM-yo-vEZ" kind="show" id="qP3-fJ-eI5"/>
+                                    <segue destination="gIM-yo-vEZ" kind="show" identifier="" id="qP3-fJ-eI5"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categoria" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qmi-81-RL7">
@@ -562,6 +569,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="130" y="198.5" width="340" height="20.5"/>
+                                </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -590,21 +600,21 @@
                                 <exclude reference="Qmi-81-RL7"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="SuE-MH-q7r"/>
-                                <exclude reference="uDc-6N-ORD"/>
-                                <exclude reference="w3X-hL-GRf"/>
                                 <exclude reference="2eZ-mT-Xoj"/>
                                 <exclude reference="gUi-AF-AHI"/>
                                 <exclude reference="nhK-2o-5XB"/>
                                 <exclude reference="u0L-OM-weD"/>
+                                <exclude reference="Cpt-fv-Wdl"/>
+                                <exclude reference="SuE-MH-q7r"/>
+                                <exclude reference="uDc-6N-ORD"/>
+                                <exclude reference="w3X-hL-GRf"/>
+                                <exclude reference="6zK-wS-8RK"/>
+                                <exclude reference="BCl-4Z-Zhl"/>
+                                <exclude reference="wmu-9h-jhc"/>
                                 <exclude reference="00K-ea-7dV"/>
                                 <exclude reference="9Hz-BO-xc0"/>
                                 <exclude reference="VL1-Hu-QtC"/>
                                 <exclude reference="pgJ-wl-PjP"/>
-                                <exclude reference="6zK-wS-8RK"/>
-                                <exclude reference="BCl-4Z-Zhl"/>
-                                <exclude reference="wmu-9h-jhc"/>
-                                <exclude reference="Cpt-fv-Wdl"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -615,21 +625,21 @@
                                 <include reference="Qmi-81-RL7"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="SuE-MH-q7r"/>
-                                <include reference="uDc-6N-ORD"/>
-                                <include reference="w3X-hL-GRf"/>
                                 <include reference="2eZ-mT-Xoj"/>
                                 <include reference="gUi-AF-AHI"/>
                                 <include reference="nhK-2o-5XB"/>
                                 <exclude reference="u0L-OM-weD"/>
+                                <include reference="Cpt-fv-Wdl"/>
+                                <include reference="SuE-MH-q7r"/>
+                                <include reference="uDc-6N-ORD"/>
+                                <include reference="w3X-hL-GRf"/>
+                                <include reference="6zK-wS-8RK"/>
+                                <include reference="BCl-4Z-Zhl"/>
+                                <include reference="wmu-9h-jhc"/>
                                 <include reference="00K-ea-7dV"/>
                                 <exclude reference="9Hz-BO-xc0"/>
                                 <include reference="VL1-Hu-QtC"/>
                                 <include reference="pgJ-wl-PjP"/>
-                                <include reference="6zK-wS-8RK"/>
-                                <include reference="BCl-4Z-Zhl"/>
-                                <include reference="wmu-9h-jhc"/>
-                                <include reference="Cpt-fv-Wdl"/>
                             </mask>
                         </variation>
                     </view>
@@ -646,6 +656,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="qP3-fJ-eI5"/>
-        <segue reference="dp0-zm-H2K"/>
+        <segue reference="FJW-h1-4W1"/>
     </inferredMetricsTieBreakers>
 </document>

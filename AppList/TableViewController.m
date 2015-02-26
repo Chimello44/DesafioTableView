@@ -137,7 +137,13 @@
     [self.listaFoto exchangeObjectAtIndex:fromIndexPath.row withObjectAtIndex: toIndexPath.row];
     
     [self.tableView reloadData];
-
+/*
+    [self setEditing:NO];
+    if(self.tableView.editing == YES)
+        [self.tableView setEditing:NO];
+    else
+        [self.tableView setEditing: YES];
+ */
     
 }
 
