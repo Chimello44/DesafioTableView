@@ -8,7 +8,13 @@
 
 #import "TableViewController.h"
 
-@interface TableViewController ()
+@interface TableViewController()
+{
+    UILongPressGestureRecognizer * editarTableLongPressGestureRecognizer;
+    UITapGestureRecognizer * tapGestureRecognizer;
+}
+
+-(void)gerenciarGestureRecognizer:(UIGestureRecognizer *)sender;
 
 @end
 
@@ -16,8 +22,22 @@
 
 @synthesize listaCategoria, listaFoto, listaNome;
 
-
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
+    // GESTURE ALLOC
+    
+    //aloquei aqui os metodos de toque do app que chamam uma função que gerencia para o evento @selector (gerenciarGestureRecognizer);
+    
+    editarTableLongPressGestureRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(gerenciarGestureRecognizer:)];
+    [editarTableLongPressGestureRecognizer setMinimumPressDuration:1.5];
+    [[self view] addGestureRecognizer:editarTableLongPressGestureRecognizer];
+    tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(gerenciarGestureRecognizer:)];
+    [tapGestureRecognizer setNumberOfTapsRequired:1];
+    [[self view] addGestureRecognizer:tapGestureRecognizer];
+    
+    // GESTURE ALLOC
+    
+    
     listaNome = [[NSMutableArray alloc]init];
     listaCategoria = [[NSMutableArray alloc]init];
     listaFoto = [[NSMutableArray alloc]init];
@@ -47,6 +67,11 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(BOOL) prefersStatusBarHidden
+{
+    return YES;
 }
 
 #pragma mark - Table view data source
@@ -184,8 +209,34 @@
 }
 
 
+
+
 - (IBAction)cadastro:(id)sender {
 //    TableViewController *tela= [[TableViewController alloc]init];
 //    [self.navigationController pushViewController:tela animated:YES];
 }
+
+-(void)gerenciarGestureRecognizer:(UIGestureRecognizer *)sender
+{
+    if([sender isKindOfClass:[UILongPressGestureRecognizer class]])
+    {
+        if([sender state] == UIGestureRecognizerStateEnded)
+        {
+            if([[self tableView] isEditing])
+            {
+                [[self tableView] setEditing:NO];
+            }
+            else
+            {
+                [[self tableView] setEditing:YES];
+            }
+        }
+    }
+    else if([sender isKindOfClass:[UITapGestureRecognizer class]])
+    {
+        NSLog(@"\n\n\n RODEI TAP!!!\n\n");
+    }
+}
+
+
 @end

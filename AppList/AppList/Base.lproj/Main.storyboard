@@ -406,7 +406,7 @@
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
-                                            <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                            <variation key="heightClass=regular-widthClass=compact" ambiguous="YES">
                                                 <rect key="frame" x="144" y="13" width="165" height="22"/>
                                             </variation>
                                         </label>
@@ -440,7 +440,7 @@
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
-                                            <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                            <variation key="heightClass=regular-widthClass=compact" ambiguous="YES">
                                                 <rect key="frame" x="144" y="56" width="179" height="21"/>
                                             </variation>
                                         </label>
@@ -527,15 +527,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="130" y="58" width="340" height="20.5"/>
-                                </variation>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7mv-oc-DAM">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="73" y="343" width="455" height="2"/>
-                                </variation>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hw0-J1-0I5">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -552,16 +546,14 @@
                                         <exclude reference="kci-O2-Clr"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="177" y="459" width="46" height="30"/>
+                                <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="2WU-3i-2Ty"/>
                                         <include reference="kci-O2-Clr"/>
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <action selector="voltarApp:" destination="HyS-41-Kj4" eventType="touchUpInside" id="33N-8S-xnq"/>
-                                    <segue destination="gIM-yo-vEZ" kind="show" identifier="" id="qP3-fJ-eI5"/>
+                                    <segue destination="gIM-yo-vEZ" kind="show" id="2iC-NZ-sNE"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categoria" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qmi-81-RL7">
@@ -569,9 +561,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="130" y="198.5" width="340" height="20.5"/>
-                                </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -655,7 +644,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="qP3-fJ-eI5"/>
-        <segue reference="FJW-h1-4W1"/>
+        <segue reference="dp0-zm-H2K"/>
+        <segue reference="2iC-NZ-sNE"/>
     </inferredMetricsTieBreakers>
 </document>
