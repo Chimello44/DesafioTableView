@@ -193,12 +193,8 @@
     
 }
 
-
-
-
-- (IBAction)cadastro:(id)sender {
-//    TableViewController *tela= [[TableViewController alloc]init];
-//    [self.navigationController pushViewController:tela animated:YES];
+- (IBAction)btnVoltar:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 -(void)gerenciarGestureRecognizer:(UIGestureRecognizer *)sender

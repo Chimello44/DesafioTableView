@@ -20,6 +20,6 @@
     AppDelegate *appDelegate;
 }
 
-- (IBAction)cadastro:(id)sender;
+- (IBAction)btnVoltar:(id)sender;
 
 @end
