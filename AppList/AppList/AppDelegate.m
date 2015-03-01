@@ -14,8 +14,25 @@
 
 @implementation AppDelegate
 
+@synthesize listaNomes, listaCategorias, listaImagens;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    listaNomes = [[NSMutableArray alloc] init];
+    listaCategorias = [[NSMutableArray alloc] init];
+    listaImagens = [[NSMutableArray alloc] init];
+
+    [self.listaNomes addObject:@"Waze"];
+    [self.listaNomes addObject:@"WhatsApp"];
+    [self.listaNomes addObject:@"Facebook"];
+    
+    [self.listaCategorias addObject: @"Navegação"];
+    [self.listaCategorias addObject: @"Comunicação"];
+    [self.listaCategorias addObject: @"Entretenimento"];
+    
+    [self.listaImagens addObject: @"waze.jpg"];
+    [self.listaImagens addObject: @"whatsapp.jpg"];
+    [self.listaImagens addObject: @"facebook.png"];
+    
     // Override point for customization after application launch.
     return YES;
 }

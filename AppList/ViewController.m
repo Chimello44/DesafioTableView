@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "TableViewController.h"
+#import "AppDelegate.h"
 
 @interface ViewController ()
 
@@ -19,6 +20,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    
+    [textNome becomeFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -37,10 +42,22 @@
 */
 
 - (IBAction)cadastrar:(id)sender {
-    table = [TableViewController alloc];
-    [table.listaNome addObject:@"sdasdas"];
-    [table.listaCategoria addObject: textCategoria.text];
-    NSLog(@"%lu", [table.listaNome count]);
+//    table = [TableViewController alloc];
+//    if (textNome.text != nil && textCategoria.text != nil) {
+//        [[[table init] listaNome] addObject:textNome.text];
+////        [table.listaNome addObject:textNome.text];
+//        [table.listaCategoria addObject: textCategoria.text];
+//    }
+//    NSLog(@"%@", [table.listaNome lastObject]);
+    
+    [appDelegate.listaNomes addObject:textNome.text];
+    [appDelegate.listaCategorias addObject:textCategoria.text];
+    
+//    Implementar imagem.
+    [appDelegate.listaImagens addObject:@"facebook.png"];
+    
+    NSLog(@"%@", [appDelegate.listaNomes lastObject]);
+    
 }
 
 -(void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -49,7 +66,7 @@
 
 }
 
-- (IBAction)voltar:(id)sender {
-   // [self dismissViewControllerAnimated:YES completion:nil];
+- (IBAction)btnVoltar:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 @end

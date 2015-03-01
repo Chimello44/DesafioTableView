@@ -39,8 +39,8 @@
 		E36EA87D1A9E9D27000E2CE4 /* whatsapp.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = whatsapp.jpg; path = Images.xcassets/whatsapp.jpg; sourceTree = "<group>"; };
 		E395DEFD1A9E60F1001FFC90 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		E395DEFE1A9E60F1001FFC90 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
-		E86528731A9E6D4A00A85DDD /* AppViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppViewController.h; sourceTree = "<group>"; };
-		E86528741A9E6D4A00A85DDD /* AppViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppViewController.m; sourceTree = "<group>"; };
+		E86528731A9E6D4A00A85DDD /* AppViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppViewController.h; path = ../AppViewController.h; sourceTree = "<group>"; };
+		E86528741A9E6D4A00A85DDD /* AppViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppViewController.m; path = ../AppViewController.m; sourceTree = "<group>"; };
 		E8D758131A9E41E4004CC606 /* AppList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8D758171A9E41E4004CC606 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8D758181A9E41E4004CC606 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -52,12 +52,12 @@
 		E8D7582C1A9E41E4004CC606 /* AppListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8D758311A9E41E4004CC606 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8D758321A9E41E4004CC606 /* AppListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppListTests.m; sourceTree = "<group>"; };
-		E8D7583C1A9E42BA004CC606 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
-		E8D7583D1A9E42BA004CC606 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
-		E8D7583F1A9E42CB004CC606 /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
-		E8D758401A9E42CB004CC606 /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
-		E8D758421A9E42E1004CC606 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E8D758431A9E42E1004CC606 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E8D7583C1A9E42BA004CC606 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TableViewController.h; path = ../TableViewController.h; sourceTree = "<group>"; };
+		E8D7583D1A9E42BA004CC606 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TableViewController.m; path = ../TableViewController.m; sourceTree = "<group>"; };
+		E8D7583F1A9E42CB004CC606 /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TableViewCell.h; path = ../TableViewCell.h; sourceTree = "<group>"; };
+		E8D758401A9E42CB004CC606 /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TableViewCell.m; path = ../TableViewCell.m; sourceTree = "<group>"; };
+		E8D758421A9E42E1004CC606 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ../ViewController.h; sourceTree = "<group>"; };
+		E8D758431A9E42E1004CC606 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = ../ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,14 +81,6 @@
 		E8D7580A1A9E41E4004CC606 = {
 			isa = PBXGroup;
 			children = (
-				E86528731A9E6D4A00A85DDD /* AppViewController.h */,
-				E86528741A9E6D4A00A85DDD /* AppViewController.m */,
-				E8D758421A9E42E1004CC606 /* ViewController.h */,
-				E8D758431A9E42E1004CC606 /* ViewController.m */,
-				E8D7583F1A9E42CB004CC606 /* TableViewCell.h */,
-				E8D758401A9E42CB004CC606 /* TableViewCell.m */,
-				E8D7583C1A9E42BA004CC606 /* TableViewController.h */,
-				E8D7583D1A9E42BA004CC606 /* TableViewController.m */,
 				E8D758151A9E41E4004CC606 /* AppList */,
 				E8D7582F1A9E41E4004CC606 /* AppListTests */,
 				E8D758141A9E41E4004CC606 /* Products */,
@@ -109,6 +101,14 @@
 			children = (
 				E8D7581A1A9E41E4004CC606 /* AppDelegate.h */,
 				E8D7581B1A9E41E4004CC606 /* AppDelegate.m */,
+				E86528731A9E6D4A00A85DDD /* AppViewController.h */,
+				E86528741A9E6D4A00A85DDD /* AppViewController.m */,
+				E8D758421A9E42E1004CC606 /* ViewController.h */,
+				E8D758431A9E42E1004CC606 /* ViewController.m */,
+				E8D7583F1A9E42CB004CC606 /* TableViewCell.h */,
+				E8D758401A9E42CB004CC606 /* TableViewCell.m */,
+				E8D7583C1A9E42BA004CC606 /* TableViewController.h */,
+				E8D7583D1A9E42BA004CC606 /* TableViewController.m */,
 				E8D758201A9E41E4004CC606 /* Main.storyboard */,
 				E8D758231A9E41E4004CC606 /* Images.xcassets */,
 				E36EA87B1A9E9D27000E2CE4 /* facebook.png */,

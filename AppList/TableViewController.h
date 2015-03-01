@@ -9,14 +9,17 @@
 #import <UIKit/UIKit.h>
 #include "TableViewCell.h"
 #include "AppViewController.h"
+#include "AppDelegate.h"
+
+//@protocol TDelegate <NSObject>
+
+//@end
 
 @interface TableViewController : UITableViewController
+{
+    AppDelegate *appDelegate;
+}
 
 - (IBAction)cadastro:(id)sender;
-
-@property (nonatomic) NSMutableArray *listaNome;
-@property (nonatomic) NSMutableArray *listaCategoria;
-@property (nonatomic) NSMutableArray *listaFoto;
-
 
 @end

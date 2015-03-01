@@ -7,6 +7,7 @@
 //
 
 #import "AppViewController.h"
+#import "TableViewController.h"
 
 @interface AppViewController ()
 
@@ -16,7 +17,8 @@
 
 - (void)viewDidLoad {
    // _appDetail = [[NSArray alloc]init];
-//    
+//
+
     _appNome.text=_appDetail[0];
     _appCategoria.text=_appDetail[1];
     [_imgApp setImage:[UIImage imageNamed: _appDetail[2]]];
@@ -40,8 +42,7 @@
 */
 
 - (IBAction)voltarApp:(id)sender {
-    
-    
+    [self dismissViewControllerAnimated:YES completion:nil];
     //[self dismissViewControllerAnimated:YES completion: nil];
     
 }

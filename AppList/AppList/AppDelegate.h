@@ -11,7 +11,9 @@
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
+@property (strong, nonatomic) NSMutableArray *listaNomes;
+@property (strong, nonatomic) NSMutableArray *listaCategorias;
+@property (strong, nonatomic) NSMutableArray *listaImagens;
 
 @end
 

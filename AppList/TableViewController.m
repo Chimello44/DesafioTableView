@@ -9,6 +9,7 @@
 #import "TableViewController.h"
 
 @interface TableViewController()
+
 {
     UILongPressGestureRecognizer * editarTableLongPressGestureRecognizer;
     UITapGestureRecognizer * tapGestureRecognizer;
@@ -20,11 +21,15 @@
 
 @implementation TableViewController
 
-@synthesize listaCategoria, listaFoto, listaNome;
+//@synthesize listaCategoria, listaFoto, listaNome;
 
 - (void)viewDidLoad
 {
     // GESTURE ALLOC
+    
+    
+    appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    
     
     //aloquei aqui os metodos de toque do app que chamam uma função que gerencia para o evento @selector (gerenciarGestureRecognizer);
     
@@ -37,28 +42,11 @@
     
     // GESTURE ALLOC
     
-    
-    listaNome = [[NSMutableArray alloc]init];
-    listaCategoria = [[NSMutableArray alloc]init];
-    listaFoto = [[NSMutableArray alloc]init];
-    
-    
-    [listaNome insertObject:@"Waze" atIndex:0];
-    [listaNome insertObject:@"WhatsApp" atIndex:1];
-    [listaNome insertObject:@"Facebook" atIndex:2];
-    
-    [listaCategoria insertObject: @"Navegação" atIndex:0];
-    [listaCategoria insertObject: @"Comunicação" atIndex:1];
-    [listaCategoria insertObject: @"Entretenimento" atIndex:2];
-    
-    [listaFoto insertObject:@"waze.jpg" atIndex:0];
-    [listaFoto insertObject:@"whatsapp.jpg" atIndex:1];
-    [listaFoto insertObject:@"facebook.png" atIndex:2];
+
     
 //    listaNome = @[@"Waze", @"WhatsApp", @"Facebook"];
 //    listaCategoria = @[@"Navegação", @"Comunicacação", @"Entretenimento"];
 //    listaFoto = @[@"waze.jpg", @"whatsapp.jpg", @"facebook.png"];
-    
     
     [super viewDidLoad];
     
@@ -83,21 +71,19 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-
     // Return the number of rows in the section.
-    NSLog(@"%lu", listaNome.count);
-    return listaNome.count;
+    NSLog(@"%lu", [appDelegate.listaNomes count]);
+    return [appDelegate.listaNomes count];
 }
-
-
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     TableViewCell *cell = (TableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"App" forIndexPath:indexPath];
     
     long row = [indexPath row];
-    cell.LBLNome.text = [listaNome objectAtIndex:row];
-    cell.LBLcategoria.text = [listaCategoria objectAtIndex:row];
-    [cell.imgApp setImage:[UIImage imageNamed: [listaFoto objectAtIndex:row]]];
+
+    cell.LBLNome.text = [appDelegate.listaNomes objectAtIndex:row];
+    cell.LBLcategoria.text = [appDelegate.listaCategorias objectAtIndex:row];
+    [cell.imgApp setImage:[UIImage imageNamed: [appDelegate.listaImagens objectAtIndex:row]]];
     
     return cell;
 }
@@ -128,9 +114,9 @@
     
     if (editingStyle == UITableViewCellEditingStyleDelete) {
     //     Delete the row from the data source
-        [listaFoto removeObjectAtIndex: indexPath.row];
-        [listaNome removeObjectAtIndex: indexPath.row];
-        [listaCategoria removeObjectAtIndex: indexPath.row];
+        [appDelegate.listaImagens removeObjectAtIndex: indexPath.row];
+        [appDelegate.listaNomes removeObjectAtIndex: indexPath.row];
+        [appDelegate.listaCategorias removeObjectAtIndex: indexPath.row];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
       //   Create a new instance of the appropriate class, insert it //into the array, and add a new row to the table view
@@ -141,25 +127,24 @@
 
 // Override to support rearranging the table view.
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-//    
-//    id buffer;
-//    buffer = [listaNome objectAtIndex:fromIndexPath.row];
-//    [listaNome removeObjectAtIndex: fromIndexPath.row];
-//    [listaNome insertObject:buffer atIndex:toIndexPath.row];
-//
-//    buffer = [listaCategoria objectAtIndex:fromIndexPath.row];
-//    [listaCategoria removeObjectAtIndex: fromIndexPath.row];
-//    [listaCategoria insertObject:buffer atIndex:toIndexPath.row];
-//    
-//    buffer = [listaFoto objectAtIndex:fromIndexPath.row];
-//    [listaFoto removeObjectAtIndex: fromIndexPath.row];
-//    [listaFoto insertObject:buffer atIndex:toIndexPath.row];
-//    
-//    
+    
+    id buffer;
+    buffer = [appDelegate.listaNomes objectAtIndex:fromIndexPath.row];
+    [appDelegate.listaNomes removeObjectAtIndex: fromIndexPath.row];
+    [appDelegate.listaNomes insertObject:buffer atIndex:toIndexPath.row];
 
-    [self.listaNome exchangeObjectAtIndex:fromIndexPath.row withObjectAtIndex: toIndexPath.row];
-    [self.listaCategoria exchangeObjectAtIndex:fromIndexPath.row withObjectAtIndex: toIndexPath.row];
-    [self.listaFoto exchangeObjectAtIndex:fromIndexPath.row withObjectAtIndex: toIndexPath.row];
+    buffer = [appDelegate.listaCategorias objectAtIndex:fromIndexPath.row];
+    [appDelegate.listaCategorias removeObjectAtIndex: fromIndexPath.row];
+    [appDelegate.listaCategorias insertObject:buffer atIndex:toIndexPath.row];
+    
+    buffer = [appDelegate.listaImagens objectAtIndex:fromIndexPath.row];
+    [appDelegate.listaImagens removeObjectAtIndex: fromIndexPath.row];
+    [appDelegate.listaImagens insertObject:buffer atIndex:toIndexPath.row];
+    
+    
+    [appDelegate.listaNomes exchangeObjectAtIndex:fromIndexPath.row withObjectAtIndex: toIndexPath.row];
+    [appDelegate.listaCategorias exchangeObjectAtIndex:fromIndexPath.row withObjectAtIndex: toIndexPath.row];
+    [appDelegate.listaImagens exchangeObjectAtIndex:fromIndexPath.row withObjectAtIndex: toIndexPath.row];
     
     [self.tableView reloadData];
 /*
@@ -202,7 +187,7 @@
         NSIndexPath *myIndexPath =[self.tableView indexPathForSelectedRow];
         
         long row=[myIndexPath row];
-        appViewController.appDetail=@[[listaNome objectAtIndex:row],[listaCategoria objectAtIndex:row], [listaFoto objectAtIndex:row]];
+        appViewController.appDetail=@[[appDelegate.listaNomes objectAtIndex:row],[appDelegate.listaCategorias objectAtIndex:row], [appDelegate.listaImagens objectAtIndex:row]];
         
     }
     
