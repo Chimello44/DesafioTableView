@@ -12,26 +12,11 @@
 
 @interface TableViewController : UITableViewController
 
-{
-//    NSArray *listaNome;
-//    NSArray *listaCategoria;
-//    NSArray *listaFoto;
-    //
-    //
-    
-    NSMutableArray *listaNome;
-    NSMutableArray *listaCategoria;
-    NSMutableArray *listaFoto;
-}
 - (IBAction)cadastro:(id)sender;
 
-//@property NSArray *listaNome;
-//@property NSArray *listaCategoria;
-//@property NSArray *listaFoto;
-
-@property NSMutableArray *listaNome;
-@property NSMutableArray *listaCategoria;
-@property NSMutableArray *listaFoto;
+@property (nonatomic) NSMutableArray *listaNome;
+@property (nonatomic) NSMutableArray *listaCategoria;
+@property (nonatomic) NSMutableArray *listaFoto;
 
 
 @end

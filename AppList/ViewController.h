@@ -11,11 +11,12 @@
 
 @interface ViewController : UIViewController
 {
-   TableViewController *table;
+    TableViewController *table;
 }
 @property (weak, nonatomic) IBOutlet UITextField *textNome;
 @property (weak, nonatomic) IBOutlet UITextField *textCategoria;
 - (IBAction)cadastrar:(id)sender;
 - (IBAction)voltar:(id)sender;
+//@property (nonatomic) TableViewController *table;
 
 @end

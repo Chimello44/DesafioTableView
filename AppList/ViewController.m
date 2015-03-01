@@ -37,11 +37,10 @@
 */
 
 - (IBAction)cadastrar:(id)sender {
-//    [table.listaNome addObject:textNome.text];
-////    [[table listaNome]addObject: textNome.text];
-//    [[table listaCategoria]addObject: textCategoria.text];
-//    NSLog(@"%@", [[table listaNome]lastObject]);
-////    NSLog(@"%@", textNome.text);
+    table = [TableViewController alloc];
+    [table.listaNome addObject:@"sdasdas"];
+    [table.listaCategoria addObject: textCategoria.text];
+    NSLog(@"%lu", [table.listaNome count]);
 }
 
 -(void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
